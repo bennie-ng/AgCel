@@ -14,6 +14,11 @@ This installs the `.agent/` folder, enabling your AI agent to understand your pr
 ## 🔄 The AI-Driven Lifecycle
 AgCel empowers your AI agent to participate in every stage of the SDLC using slash commands:
 
+0.  **Discover (Market Researcher)**
+    - Command: `/research_market`
+    - Action: Identifies viable **Market Gaps** and validates problems.
+    - Output: `market_opportunity.md`.
+
 1.  **Define (Business Analyst)**
     - Command: `/spec_feature`
     - Action: Turns vague ideas into strict **User Stories** and **Acceptance Criteria**.
@@ -49,8 +54,20 @@ Automatically applied based on project detection (`pom.xml`, `package.json`, etc
 - **[Node.js](.agent/rules/nodejs.md)**: Fastify, TypeBox, BullMQ.
 - **[React/Next.js](.agent/rules/react.md)**: Server Components, Shadcn, TypeScript.
 
-### 3. Role Guides
+### 3. AI Workflows (Slash Commands)
+**Lifecycle Management:**
+- `/research_market` (Researcher): Finds and validates market opportunities.
+- `/spec_feature` (BA): Turns ideas into INVEST-compliant User Stories & Requirements.
+- `/plan_qa` (QA): Generates a Test Plan based on requirements (Test Pyramid).
+- `/implement_feature` (Dev): Builds the feature using TDD (Red-Green-Refactor).
+- `/pre_commit_check` (CI): Validates code & contracts before merge.
+
+**Ops:**
+- `/init_service`: Scaffolds a new service (Java/Python/Node) complete with Docker/Tests.
+
+### 4. Role Guides
 Detailed standards for human team members:
+- [Market Researcher](docs/roles/market-researcher.md)
 - [Developer](docs/roles/developer.md)
 - [Product Owner](docs/roles/product-owner.md)
 - [QA / Tester](docs/roles/tester.md)
