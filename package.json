@@ -1,0 +1,17 @@
+{
+  "name": "ag-cel",
+  "version": "1.0.0",
+  "description": "AgCel Automated Governance Layer",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/sync-rules.js && vitepress dev docs",
+    "build": "node scripts/sync-rules.js && vitepress build docs",
+    "preview": "vitepress preview docs",
+    "sync": "node scripts/sync-rules.js"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.4.0",
+    "fs-extra": "^11.2.0"
+  }
+}
