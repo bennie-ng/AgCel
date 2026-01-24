@@ -1,49 +1,47 @@
-# AgCel
+# AgCel (Antigravity Cell)
 
-AgCel (Antigravity Cell) is a repository for project standards, rules, and commands tailored for various roles and technologies. It aims to provide a unified source of truth for software development best practices.
+AgCel is the **Automated Governance Layer** for your software projects. It provides a unified source of truth for standards, rules, and AI-driven workflows, ensuring consistent quality across diverse tech stacks.
 
-## Global Rules
-- [Global Rules](.agent/rules/global.md)
+## 🚀 Quick Install
+To add AgCel standards and AI capabilities to *any* project, run:
 
-## Roles
+```bash
+curl -sL https://raw.githubusercontent.com/hoangna1204/ag-cel/main/install.sh | bash
+```
 
-Detailed guides and standards for specific roles within the team:
+This installs the `.agent/` folder, enabling your AI agent to understand your project's strict rules and workflows seamlessly.
 
-- [Business Analyst](docs/roles/business-analyst.md)
-- [Product Owner](docs/roles/product-owner.md)
-- [Product Manager](docs/roles/product-manager.md)
+---
+
+## 🧠 Core Features
+
+### 1. Global Rules
+The source of truth for all AI interactions.
+- **[Global Rules](.agent/rules/global.md)**: Defines the "No Assumption Policy", TDD Mandate, and Operational Workflows.
+
+### 2. Tech Stack Standards
+Automatically applied based on project detection (`pom.xml`, `package.json`, etc.).
+- **[Java/Spring Boot](.agent/rules/springboot.md)**: DTOs, Hexagonal Arch, Flyway.
+- **[Python](.agent/rules/python.md)**: FastAPI, Pydantic, Alembic.
+- **[Node.js](.agent/rules/nodejs.md)**: Fastify, TypeBox, BullMQ.
+- **[React/Next.js](.agent/rules/react.md)**: Server Components, Shadcn, TypeScript.
+
+### 3. AI Workflows (Slash Commands)
+Executable Standard Operating Procedures (SOPs).
+- `/init_service`: Scaffolds a new service (Java/Python/Node) complete with Docker/Tests.
+- `/implement_feature`: Enforces Red-Green-Refactor TDD cycles.
+- `/pre_commit_check`: Runs API contract tests + Code Review before you push.
+
+### 4. Role Guides
+Detailed standards for human team members:
 - [Developer](docs/roles/developer.md)
-- [Tester](docs/roles/tester.md)
-- [UI/UX Designer](docs/roles/ui-ux-designer.md)
+- [Product Owner](docs/roles/product-owner.md)
+- [QA / Tester](docs/roles/tester.md)
 
-## Standards
+---
 
-Technical standards and coding guidelines:
-
-- [Python](docs/standards/python.md)
-- [Java](docs/standards/java.md)
-- [Web (React/Node.js)](docs/standards/web.md)
-- [Mobile (iOS/Android)](docs/standards/mobile.md)
-- [Database](docs/standards/database.md)
-
-## Workflows (Commands)
-
-Executable AI workflows and commands are located in:
-- [Workflows](.agent/workflows/)
-
-
-## Templates
-
-Project templates and skeletons are located in the `templates/` directory.
-
-## How to Use AgCel
-
-### For New Projects
-1.  **Reference**: Use this repository as a guide when setting up new projects.
-2.  **Adoption**: Copy relevant standards (e.g., `docs/standards/python.md`) into your new project's documentation folder.
-
-### For Antigravity (AI) Context
-To ensure the AI follows these standards and rules in your new workspace:
-1.  **Add Context**: Add the `ag-cel` repository (or specific files like `global-rules.md` and role-specific docs) to the AI's context.
-2.  **Instruction**: Explicitly tell the AI: *"Reference the @ag-cel standards for this project, specifically the Global Rules and Developer standards."*
-3.  **Enforcement**: The AI will then be aware of the "No Assumption Policy" and other best practices defined here.
+## 🤖 How It Works with AI
+Once installed, your AI agent (Antigravity) will:
+1.  **Auto-Detect**: Scan your repo and load the correct rules (e.g., "Ah, this is a Spring Boot app").
+2.  **Enforce**: Refuse to write code without tests (TDD mandate).
+3.  **Assist**: Use Skills like `scaffold_service` or `api_contract_tests` to perform complex tasks autonomously.
