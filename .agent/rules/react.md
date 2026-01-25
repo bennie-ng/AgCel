@@ -5,6 +5,10 @@
 - **Linting**: Use `ESLint` and `Prettier` with the project's configuration.
 - **Components**: Use Functional Components with Hooks.
 
+### Performance & Security
+- **Best Practices**: heavily relies on the patterns defined in the `react-best-practices` skill. Consult it for deep performance optimizations.
+- **No Barrel Files**: Do not use barrel files (index.ts re-exports) for components or utilities. Import directly from the source file to optimize tree-shaking and build speeds. (e.g., `import { Button } from '@/components/ui/button'` is okay if button.tsx exports it, but avoid `import { Button } from '@/components'`).
+
 ### Testing Guidelines
 - **Component Tests**: Test user interactions (clicks, inputs) rather than internal implementation details.
 - **Queries**: Always prefer `getByRole` or `getByText` over CSS selectors.
