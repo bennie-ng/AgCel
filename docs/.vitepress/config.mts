@@ -96,11 +96,13 @@ export default defineConfig({
           items: [
             { text: 'Developer', link: '/roles/developer' },
             { text: 'Product Owner', link: '/roles/product-owner' },
+            { text: 'Product Manager', link: '/roles/product-manager' },
             { text: 'Tester / QA', link: '/roles/tester' },
             { text: 'Business Analyst', link: '/roles/business-analyst' },
             { text: 'Market Researcher', link: '/roles/market-researcher' },
             { text: 'System Architect', link: '/roles/system-architect' },
             { text: 'Solution Designer', link: '/roles/solution-designer' },
+            { text: 'UI/UX Designer', link: '/roles/ui-ux-designer' },
           ]
         }
       ]

@@ -19,28 +19,28 @@ const DESTINATIONS = {
 async function sync() {
     try {
         // 1. Sync Rules
-        await fs.ensureDir(DESTINATIONS.RULES);
+        await fs.emptyDir(DESTINATIONS.RULES);
         await fs.copy(SOURCES.RULES, DESTINATIONS.RULES, { overwrite: true });
         console.log('✅ Synchronized rules');
 
         // 2. Sync Workflows
-        await fs.ensureDir(DESTINATIONS.WORKFLOWS);
+        await fs.emptyDir(DESTINATIONS.WORKFLOWS);
         await fs.copy(SOURCES.WORKFLOWS, DESTINATIONS.WORKFLOWS, { overwrite: true });
         console.log('✅ Synchronized workflows');
 
         // 3. Sync Skills (Flatten structure: skill/SKILL.md -> skills/skill.md)
-        await fs.ensureDir(DESTINATIONS.SKILLS);
+        await fs.emptyDir(DESTINATIONS.SKILLS);
         const skills = await fs.readdir(SOURCES.SKILLS);
-        
+
         for (const skillName of skills) {
             const skillDir = path.join(SOURCES.SKILLS, skillName);
             const stats = await fs.stat(skillDir);
-            
+
             if (stats.isDirectory()) {
                 const skillFile = path.join(skillDir, 'SKILL.md');
                 if (await fs.pathExists(skillFile)) {
                     await fs.copy(
-                        skillFile, 
+                        skillFile,
                         path.join(DESTINATIONS.SKILLS, `${skillName}.md`),
                         { overwrite: true }
                     );
