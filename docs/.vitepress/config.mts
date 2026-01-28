@@ -8,7 +8,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Rules', link: '/rules/global' },
-      { text: 'Workflows', link: '/workflows/implement_feature' },
+      { text: 'Workflows', link: '/workflows/feature' },
       { text: 'Skills', link: '/skills/test_driven_development' },
       { text: 'Roles', link: '/roles/developer' },
     ],
@@ -34,25 +34,26 @@ export default defineConfig({
           items: [
             {
               text: 'Understand & Research', items: [
-                { text: 'Market Research', link: '/workflows/research_market' },
+                { text: 'Market Research', link: '/workflows/research' },
                 { text: 'Brainstorm', link: '/workflows/brainstorm' },
-                { text: 'Spec Feature', link: '/workflows/spec_feature' },
+                { text: 'Spec Feature', link: '/workflows/spec' },
               ]
             },
             {
               text: 'Design & Plan', items: [
-                { text: 'Design Solution', link: '/workflows/design_solution' },
-                { text: 'Draft ADR', link: '/workflows/draft_adr' },
-                { text: 'Plan QA', link: '/workflows/plan_qa' },
+                { text: 'Design Solution', link: '/workflows/design' },
+                { text: 'Draft ADR', link: '/workflows/adr' },
+                { text: 'Plan QA', link: '/workflows/qa' },
               ]
             },
             {
               text: 'Build & Deploy', items: [
-                { text: 'Init Service', link: '/workflows/init_service' },
-                { text: 'Implement Feature', link: '/workflows/implement_feature' },
+                { text: 'Init Service', link: '/workflows/init' },
+                { text: 'Implement Feature', link: '/workflows/feature' },
                 { text: 'TDD', link: '/workflows/tdd' },
-                { text: 'Report Bug', link: '/workflows/report_bug' },
-                { text: 'Pre-Commit Check', link: '/workflows/pre_commit_check' },
+                { text: 'Review Code/Content', link: '/workflows/review' },
+                { text: 'Report Bug', link: '/workflows/bug' },
+                { text: 'Pre-Commit Check', link: '/workflows/check' },
                 { text: 'Checkpoint', link: '/workflows/checkpoint' },
               ]
             }
