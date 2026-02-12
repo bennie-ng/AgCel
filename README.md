@@ -1,101 +1,57 @@
-# AgCel (Antigravity Context Engineering Library)
+# Ag-Cel
 
-AgCel is the **Automated Governance Layer** for your software projects. It provides a unified source of truth for standards, rules, and AI-driven workflows, ensuring consistent quality across diverse tech stacks.
+Ag-Cel is a local MCP (Model Context Protocol) Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills" and "Personas".
 
-## 🚀 Quick Install
-To add AgCel standards and AI capabilities to *any* project, run:
+## Overview
+
+The project consists of two main components:
+1.  **Ag-Cel CLI**: A command-line interface to manage and interact with the MCP server.
+2.  **Ag-Cel MCP Skills Server**: A local server that hosts skills and capabilities, enabling AI agents to perform complex tasks.
+
+## Installation
+
+To install the Ag-Cel CLI globally:
+
 ```bash
-curl -sL https://raw.githubusercontent.com/bennie-ng/ag-cel/main/install.sh | bash
+npm install -g ag-cel
 ```
-This installs the `.agent/` folder, enabling your AI agent to understand your project's strict rules and workflows seamlessly.
 
----
+## CLI Usage
 
-## 🔄 The AI-Driven Lifecycle
-AgCel empowers your AI agent to participate in every stage of the SDLC using slash commands:
+The `agc` command-line tool is your primary interface. Application data is stored in the `.ag-cel` directory in user's home or project root.
 
-0.  **Discover (Market Researcher)**
-    - Command: `/research`
-    - Action: Identifies viable **Market Gaps** and validates problems.
-    - Output: `market_opportunity.md`.
+| Command | Description |
+| :--- | :--- |
+| `agc start` | Start the MCP server locally. |
+| `agc stop` | Stop the running MCP server. |
+| `agc restart` | Restart the MCP server. |
+| `agc status` | Check the status of the local MCP server. |
+| `agc init` | Initialize Ag-Cel in the current project (creates `.ag-cel` directory). |
+| `agc skills list` | List all available skills. |
+| `agc workflows list` | List all available workflows. |
+| `agc --help` | Show the help menu. |
+| `agc --version` | Show the CLI version. |
 
-1.  **Define (Business Analyst)**
-    - Command: `/spec`
-    - Action: Turns vague ideas into strict **User Stories** and **Acceptance Criteria**.
-    - Output: `requirements.md` (INVEST compliant).
+## Concepts
 
-2.  **Design (Architect/Solution Designer)**
-    - Command: `/design`
-    - Action: Creates **API Specs**, **Sequence Diagrams**, and **Data Models** before coding starts.
-    - Output: `api.yaml`, `schema.mmd`, `sequence.mmd`.
+### Skills
 
-3.  **Plan (QA/Tester)**
-    - Command: `/qa`
-    - Action: Analyses requirements to build a **Test Plan** covering Unit, Integration, and Edge cases.
-    - Output: `test_plan.md` (Test Pyramid compliant).
+**Skills** are specific, actionable capabilities that allow the AI to perform specialized tasks. Skills are stored as `.md` files in the `skills` directory.
 
-4.  **Build (Developer)**
-    - Command: `/feature`
-    - Action: Writes code using **TDD (Red-Green-Refactor)**.
-    - Output: Production-ready code + Passing Tests.
-    - **Note**: For new projects, run `/init` first to set up the skeleton so the agent can detect the stack.
+-   **Analytical**: Data analysis, debugging.
+-   **Content Generation**: Writing, formatting.
+-   **Operational**: API usage, code execution.
 
+### Rules
 
-5.  **Verify (CI/CD)**
-    - Command: `/check`
-    - Action: Validates **API Contracts**, styles, and safety rules before merging.
-    - Output: "✅ Ready to Commit".
+**Rules** serve as guardrails for the AI.
 
-6.  **Support & Ops**
-    - **Architect**: `/adr` to document decisions, `/init` to scaffold new projects.
-    - **QA**: `/bug` to capture reproducible issues.
-    - **Reviewer**: `/review` to review code or content with specific personas.
+-   **Boundary Rules**: "Do not use external libraries."
+-   **Operational Rules**: "Always ask for clarification."
+-   **Security Rules**: "Never share API keys."
 
+## Integration with Antigravity
 
----
-
-## 🧠 Core Features
-
-### 1. Global Rules
-The source of truth for all AI interactions.
-- **[Global Rules](.agent/rules/global.md)**: Defines the "No Assumption Policy", TDD Mandate, and Operational Workflows.
-
-### 2. Tech Stack Standards
-Automatically applied based on project detection (`pom.xml`, `package.json`, etc.).
-- **[Java/Spring Boot](.agent/rules/springboot.md)**: DTOs, Hexagonal Arch, Flyway.
-- **[Python](.agent/rules/python.md)**: FastAPI, Pydantic, Alembic.
-- **[Node.js](.agent/rules/nodejs.md)**: Fastify, TypeBox, BullMQ.
-- **[React/Next.js](.agent/rules/react.md)**: Server Components, Shadcn, TypeScript.
-
-### 3. AI Workflows (Slash Commands)
-**Lifecycle Management:**
-- `/research` (Researcher): Finds and validates market opportunities.
-- `/spec` (BA): Turns ideas into INVEST-compliant User Stories & Requirements.
-- `/design` (Architect): Generates technical specs (API/DB/Sequence) from requirements.
-- `/adr` (Architect): Guided workflow for creating Architecture Decision Records.
-- `/qa` (QA): Generates a Test Plan based on requirements (Test Pyramid).
-- `/bug` (QA): Creates structured, evidence-based bug reports.
-- `/feature` (Dev): Builds the feature using TDD (Red-Green-Refactor).
-- `/check` (CI): Validates code & contracts before merge.
-
-**Ops:**
-- `/init`: Scaffolds a new service (Java/Python/Node) complete with Docker/Tests.
-- `/review`: Reviews code/content (`--persona=security|content|QA`).
-
-### 4. Role Guides
-Detailed standards for human team members:
-- [Market Researcher](docs/roles/market-researcher.md)
-- [Developer](docs/roles/developer.md)
-- [Product Owner](docs/roles/product-owner.md)
-- [QA / Tester](docs/roles/tester.md)
-- [Business Analyst](docs/roles/business-analyst.md)
-- [System Architect](docs/roles/system-architect.md)
-- [Solution Designer](docs/roles/solution-designer.md)
-
----
-
-## 🤖 How It Works
-Once installed, your AI agent (Antigravity) will:
-1.  **Auto-Detect**: Scan your repo and load the correct rules (e.g., "Ah, this is a Spring Boot app").
-2.  **Enforce**: Refuse to write code without tests (TDD mandate).
-3.  **Assist**: Use Skills like `scaffold_service` or `api_contract_tests` to perform complex tasks autonomously.
+When working with the Antigravity IDE:
+1.  Run `agc init` to set up the environment.
+2.  Use workflows in the Agent Window (e.g., `/agc idea` for ideation).
