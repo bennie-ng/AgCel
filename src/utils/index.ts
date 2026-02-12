@@ -1,6 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
+// In CJS, __dirname is available globally
+export function getPackageRoot(): string {
+    return path.resolve(__dirname, '..', '..');
+}
 
 export const AG_CEL_DIR = '.ag-cel';
 export const AG_CEL_CONFIG_FILE = 'config.json';

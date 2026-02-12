@@ -6,6 +6,13 @@
     "bin": {
         "agc": "./dist/index.js"
     },
+    "files": [
+        "dist",
+        "skills",
+        ".agent",
+        "README.md",
+        "LICENSE"
+    ],
     "scripts": {
         "build": "tsc",
         "start": "node dist/server/index.js",

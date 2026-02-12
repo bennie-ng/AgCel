@@ -48,13 +48,13 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
     const tools = skills.map(skill => {
         return {
             name: skill,
-            description: `Execute the ${skill} skill`,
+            description: `Retrieve instructions for the ${skill} skill`,
             inputSchema: {
                 type: "object",
                 properties: {
                     instruction: {
                         type: "string",
-                        description: "The instruction for the skill"
+                        description: "Context or specific requirements for retrieving the skill"
                     }
                 },
                 required: ["instruction"]
@@ -73,14 +73,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const skills = getSkills();
 
     if (skills.includes(name)) {
-        return {
-            content: [
-                {
-                    type: "text",
-                    text: `Executed skill '${name}' with arguments: ${JSON.stringify(args)}`
-                }
-            ]
-        };
+        const agCelDir = getAgCelDir();
+        const skillPath = path.join(agCelDir, 'skills', name, 'SKILL.md');
+
+        if (fs.existsSync(skillPath)) {
+            const content = fs.readFileSync(skillPath, 'utf-8');
+            return {
+                content: [
+                    {
+                        type: "text",
+                        text: content
+                    }
+                ]
+            };
+        }
     }
 
     throw new Error(`Tool not found: ${name}`);
