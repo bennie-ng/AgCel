@@ -20,7 +20,7 @@ const mode = modeIndex !== -1 ? args[modeIndex + 1] : 'stdio'; // Default to std
 
 const server = new Server(
     {
-        name: "ag-cel",
+        name: "agcel",
         version: "1.0.0",
     },
     {
@@ -100,7 +100,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 server.setRequestHandler(ListResourcesRequestSchema, async () => {
     const skills = getSkills();
     const resources = skills.map(skill => ({
-        uri: `ag-cel://skills/${skill}/SKILL.md`,
+        uri: `agcel://skills/${skill}/SKILL.md`,
         name: `${skill} Documentation`,
         mimeType: "text/markdown"
     }));
@@ -111,7 +111,7 @@ server.setRequestHandler(ListResourcesRequestSchema, async () => {
 // Read Resource Handler
 server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
     const { uri } = request.params;
-    const match = uri.match(/^ag-cel:\/\/skills\/([^\/]+)\/SKILL.md$/);
+    const match = uri.match(/^agcel:\/\/skills\/([^\/]+)\/SKILL.md$/);
 
     if (match) {
         const skill = match[1];

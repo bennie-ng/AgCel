@@ -1,6 +1,6 @@
 ---
 title: Rules
-description: Understanding Ag-Cel Rules
+description: Understanding AgCel Rules
 ---
 
 **Rules** act as guardrails for your AI agents, ensuring they behave consistently and safely.

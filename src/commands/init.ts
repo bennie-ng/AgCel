@@ -8,7 +8,7 @@ export async function initCommand() {
     const agCelDir = getAgCelDir();
     const packageRoot = getPackageRoot();
 
-    console.log(chalk.blue('Initializing Ag-Cel...'));
+    console.log(chalk.blue('Initializing AgCel...'));
 
     try {
         if (!fs.existsSync(agCelDir)) {
@@ -28,7 +28,7 @@ export async function initCommand() {
             console.log(chalk.yellow('AgCel directory already exists. Updating resources...'));
         }
 
-        // Symlink skills from package to local .ag-cel/skills
+        // Symlink skills from package to local .agc/skills
         const sourceSkillsDir = path.join(packageRoot, 'skills');
         if (fs.existsSync(sourceSkillsDir)) {
             const targetSkillsDir = path.join(agCelDir, 'skills');
@@ -62,7 +62,7 @@ export async function initCommand() {
                 try {
                     console.log(chalk.blue('Symlinking skills...'));
                     fs.symlinkSync(sourceSkillsDir, targetSkillsDir, 'dir');
-                    console.log(chalk.green('Symlinked skills to .ag-cel/skills.'));
+                    console.log(chalk.green('Symlinked skills to .agc/skills.'));
                 } catch (e) {
                     console.error(chalk.red(`Failed to symlink skills: ${e}`));
                 }
@@ -125,7 +125,7 @@ export async function initCommand() {
         }
 
         console.log(chalk.green(`Successfully initialized AgCel in ${AG_CEL_DIR}`));
-        console.log(chalk.cyan('You can now add skills and workflows to the .AgCel directory.'));
+        console.log(chalk.cyan('You can now add skills and workflows to the .agc directory.'));
         console.log(chalk.white('Run "agc start" to start the local MCP server.'));
     } catch (error) {
         console.error(chalk.red('Failed to initialize AgCel:'), error);

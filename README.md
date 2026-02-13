@@ -1,19 +1,19 @@
 # AgCel
 
-Ag-Cel is a local MCP (Model Context Protocol) Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills".
+AgCel is a local MCP (Model Context Protocol) Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills".
 
 ## Overview
 
 The project consists of two main components:
-1.  **Ag-Cel CLI**: A command-line interface to manage and interact with the MCP server.
-2.  **Ag-Cel MCP Skills Server**: A local server that hosts skills and capabilities, enabling AI agents to perform complex tasks.
+1.  **AgCel CLI**: A command-line interface to manage and interact with the MCP server.
+2.  **AgCel MCP Skills Server**: A local server that hosts skills and capabilities, enabling AI agents to perform complex tasks.
 
 ## Installation
 
-To install the Ag-Cel CLI globally:
+To install the AgCel CLI globally:
 
 ```bash
-npm install -g ag-cel
+npm install -g agcel
 ```
 
 ## CLI Usage
@@ -26,7 +26,7 @@ The `agc` command-line tool is your primary interface. Application data is store
 | `agc stop` | Stop the running MCP server. |
 | `agc restart` | Restart the MCP server. |
 | `agc status` | Check the status of the local MCP server. |
-| `agc init` | Initialize Ag-Cel in the current project (creates `.ag-cel` directory). |
+| `agc init` | Initialize AgCel in the current project (creates `.agc` directory). |
 | `agc skills list` | List all available skills. |
 | `agc workflows list` | List all available workflows. |
 | `agc --help` | Show the help menu. |
@@ -36,7 +36,7 @@ The `agc` command-line tool is your primary interface. Application data is store
 
 ### Skills
 
-**Skills** are specialized capabilities that allow the AI to perform complex tasks. Ag-Cel comes with a rich set of built-in skills:
+**Skills** are specialized capabilities that allow the AI to perform complex tasks. AgCel comes with a rich set of built-in skills:
 
 -   **Languages**: Python, TypeScript, JavaScript
 -   **Frameworks**: React, Next.js, FastAPI, Django

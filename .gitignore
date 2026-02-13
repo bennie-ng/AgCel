@@ -1,7 +1,7 @@
 node_modules
 dist
-.ag-cel
+.agc
 *.log
 *.pid
 
-DS_Store
+.DS_Store

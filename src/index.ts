@@ -12,12 +12,12 @@ const program = new Command();
 
 program
     .name('agc')
-    .description('Ag-Cel MCP Skills Server CLI')
+    .description('AgCel MCP Skills Server CLI')
     .version('1.0.0');
 
 program
     .command('init')
-    .description('Initialize Ag-Cel in the current directory')
+    .description('Initialize AgCel in the current directory')
     .action(initCommand);
 
 program

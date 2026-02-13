@@ -1,16 +1,16 @@
 ---
 title: Introduction
-description: detailed introduction to Ag-Cel
+description: detailed introduction to AgCel
 ---
 
-**Ag-Cel** is a local **MCP (Model Context Protocol)** Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills".
+**AgCel** is a local **MCP (Model Context Protocol)** Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills".
 
 ## Overview
 
 The project consists of two main components:
 
-1.  **Ag-Cel CLI**: A command-line interface to manage and interact with the MCP server.
-2.  **Ag-Cel MCP Skills Server**: A local server that hosts skills and capabilities, enabling AI agents to perform complex tasks.
+1.  **AgCel CLI**: A command-line interface to manage and interact with the MCP server.
+2.  **AgCel MCP Skills Server**: A local server that hosts skills and capabilities, enabling AI agents to perform complex tasks.
 
 ## Key Features
 

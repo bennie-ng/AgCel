@@ -11,22 +11,22 @@ export function listCommand(type: 'skills' | 'workflows') {
 
     const agCelDir = getAgCelDir();
     // Check both source and local directories
-    // For now, let's assume we list what's in .ag-cel
+    // For now, let's assume we list what's in .agc
     // Ideally, we should also check the global or project skills if integrated.
 
     // NOTE: In a real implementation, we might want to list from the temp_skills directory too if configured?
-    // But per requirements, `agc init` creates .ag-cel.
+    // But per requirements, `agc init` creates .agc.
 
     // Let's list from .AgCel/<type>
     let targetDir = path.join(agCelDir, type);
 
-    // FIX: Workflows are stored in .agent/workflows, not .ag-cel/workflows
+    // FIX: Workflows are stored in .agent/workflows, not .agc/workflows
     if (type === 'workflows') {
         targetDir = path.join(process.cwd(), '.agent', 'workflows');
     }
 
     if (!fs.existsSync(targetDir)) {
-        console.log(chalk.yellow(`No ${type} directory found in .ag-cel.`));
+        console.log(chalk.yellow(`No ${type} directory found in .agc.`));
         return;
     }
 

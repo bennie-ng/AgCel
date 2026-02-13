@@ -1,7 +1,7 @@
 {
     "name": "agcel",
     "version": "1.0.0",
-    "description": "Ag-Cel MCP Skills Server and CLI",
+    "description": "AgCel MCP Skills Server and CLI",
     "main": "dist/index.js",
     "bin": {
         "agc": "./dist/index.js"

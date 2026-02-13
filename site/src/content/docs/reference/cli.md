@@ -1,6 +1,6 @@
 ---
 title: CLI Reference
-description: Ag-Cel CLI Command Reference
+description: AgCel CLI Command Reference
 ---
 
 The `agc` command-line tool provides the following commands:
@@ -34,7 +34,7 @@ agc status
 ## Project Management
 
 ### `agc init`
-Initializes Ag-Cel in the current project or directory.
+Initializes AgCel in the current project or directory.
 ```bash
 agc init
 ```
@@ -59,4 +59,4 @@ agc workflows list
 Displays the help menu with a list of all commands.
 
 ### `agc --version`
-Displays the current version of the Ag-Cel CLI.
+Displays the current version of the AgCel CLI.

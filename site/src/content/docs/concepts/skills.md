@@ -1,9 +1,9 @@
 ---
 title: Skills
-description: Understanding Ag-Cel Skills
+description: Understanding AgCel Skills
 ---
 
-**Skills** are the core building blocks of Ag-Cel. They represent specific capabilities that an AI agent can perform.
+**Skills** are the core building blocks of AgCel. They represent specific capabilities that an AI agent can perform.
 
 ## Anatomy of a Skill
 
@@ -38,4 +38,4 @@ To create a new skill:
 
 ## Using Skills
 
-Once a skill is created, it is automatically detected by the Ag-Cel server and made available to connected AI agents.
+Once a skill is created, it is automatically detected by the AgCel server and made available to connected AI agents.

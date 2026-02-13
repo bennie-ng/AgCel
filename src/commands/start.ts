@@ -6,17 +6,17 @@ import { isInitialized, savePid, getPid, isRunning, getAgCelDir } from '../utils
 
 export function startCommand() {
     if (!isInitialized()) {
-        console.error(chalk.red('Ag-Cel is not initialized. Run "agc init" first.'));
+        console.error(chalk.red('AgCel is not initialized. Run "agc init" first.'));
         return;
     }
 
     const existingPid = getPid();
     if (existingPid && isRunning(existingPid)) {
-        console.log(chalk.yellow(`Ag-Cel MCP server is already running (PID: ${existingPid})`));
+        console.log(chalk.yellow(`AgCel MCP server is already running (PID: ${existingPid})`));
         return;
     }
 
-    console.log(chalk.blue('Starting Ag-Cel MCP server...'));
+    console.log(chalk.blue('Starting AgCel MCP server...'));
 
     const serverScript = path.resolve(__dirname, '../../dist/server/index.js');
     const logFile = path.join(getAgCelDir(), 'server.log');
@@ -32,9 +32,9 @@ export function startCommand() {
     if (child.pid) {
         savePid(child.pid);
         child.unref();
-        console.log(chalk.green(`Ag-Cel MCP server started successfully (PID: ${child.pid})`));
+        console.log(chalk.green(`AgCel MCP server started successfully (PID: ${child.pid})`));
         console.log(chalk.cyan(`Logs are being written to ${logFile}`));
     } else {
-        console.error(chalk.red('Failed to start Ag-Cel MCP server.'));
+        console.error(chalk.red('Failed to start AgCel MCP server.'));
     }
 }
