@@ -2,7 +2,7 @@
 description: Production Deployment
 ---
 
-# /agc-deploy Workflow
+# /production-deploy Workflow
 
 This workflow prepares the application for production deployment.
 

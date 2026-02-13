@@ -2,7 +2,7 @@
 description: System Architecture and Design
 ---
 
-# /agc-architect Workflow
+# /architect Workflow
 
 This workflow defines the technical architecture based on the PRD.
 

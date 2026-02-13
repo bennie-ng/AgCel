@@ -2,7 +2,7 @@
 description: Ideation and Requirements Planning
 ---
 
-# /agc-plan Workflow
+# /product-plan Workflow
 
 This workflow transforms a rough idea into a concrete product plan and requirements document.
 

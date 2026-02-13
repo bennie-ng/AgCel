@@ -2,7 +2,7 @@
 description: Verification, Testing, and Auditing
 ---
 
-# /agc-verify Workflow
+# /verify Workflow
 
 This workflow audits the codebase for bugs, quality issues, and security vulnerabilities.
 

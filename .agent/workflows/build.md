@@ -2,7 +2,7 @@
 description: Development and Implementation
 ---
 
-# /agc-build Workflow
+# /build Workflow
 
 This workflow guides the implementation of features using best practices.
 
