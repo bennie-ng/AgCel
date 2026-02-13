@@ -68,7 +68,6 @@ Verify security implementation:
 - Test rate limiting
 
 
-## Examples
 
 ## Examples
 

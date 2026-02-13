@@ -12,7 +12,7 @@ description: How to install and set up AgCel
 
 To install the AgCel CLI globally, run:
 
-To install the AgCel CLI globally, run:
+
 
 ```bash
 npm install -g agcel
