@@ -24,7 +24,14 @@ These protect sensitive information and systems.
 
 ## Defining Rules
 
-Rules can be embedded directly into `SKILL.md` files or defined globally (future feature).
+Rules can be embedded directly into `SKILL.md` files or defined globally (e.g., "Iron Rules").
+
+## Iron Rules
+
+"Iron Rules" are global rules that apply to **every** interaction with AgCel skills. They are automatically injected by the AgCel server to ensure a baseline of behavior.
+
+Currently, the following Iron Rule is enforced:
+> 1. If there is anything unclear, ask the user instead of inventing new stuff. Unless the user explicitly tells the AI to invent or suggest ideas.
 
 Example in `SKILL.md`:
 
