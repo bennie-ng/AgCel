@@ -1,5 +1,5 @@
 {
-    "name": "ag-cel",
+    "name": "agcel",
     "version": "1.0.0",
     "description": "Ag-Cel MCP Skills Server and CLI",
     "main": "dist/index.js",

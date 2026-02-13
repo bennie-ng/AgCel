@@ -25,7 +25,7 @@ export async function initCommand() {
             };
             fs.writeFileSync(path.join(agCelDir, 'config.json'), JSON.stringify(config, null, 2));
         } else {
-            console.log(chalk.yellow('Ag-Cel directory already exists. Updating resources...'));
+            console.log(chalk.yellow('AgCel directory already exists. Updating resources...'));
         }
 
         // Symlink skills from package to local .ag-cel/skills
@@ -124,10 +124,10 @@ export async function initCommand() {
             console.warn(chalk.yellow(`Warning: .agent directory not found in package at ${sourceAgentDir}`));
         }
 
-        console.log(chalk.green(`Successfully initialized Ag-Cel in ${AG_CEL_DIR}`));
-        console.log(chalk.cyan('You can now add skills and workflows to the .ag-cel directory.'));
+        console.log(chalk.green(`Successfully initialized AgCel in ${AG_CEL_DIR}`));
+        console.log(chalk.cyan('You can now add skills and workflows to the .AgCel directory.'));
         console.log(chalk.white('Run "agc start" to start the local MCP server.'));
     } catch (error) {
-        console.error(chalk.red('Failed to initialize Ag-Cel:'), error);
+        console.error(chalk.red('Failed to initialize AgCel:'), error);
     }
 }

@@ -1,4 +1,4 @@
-# Ag-Cel
+# AgCel
 
 Ag-Cel is a local MCP (Model Context Protocol) Skills Server that functions both as a command-line tool and a backend for Antigravity workflows. It bridges the gap between local execution and AI agent capabilities by providing structured "Skills".
 

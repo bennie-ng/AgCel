@@ -6,7 +6,7 @@ export function getPackageRoot(): string {
     return path.resolve(__dirname, '..', '..');
 }
 
-export const AG_CEL_DIR = '.ag-cel';
+export const AG_CEL_DIR = '.AgCel';
 export const AG_CEL_CONFIG_FILE = 'config.json';
 export const AG_CEL_PID_FILE = 'mcp-server.pid';
 

@@ -162,13 +162,13 @@ async function main() {
         });
 
         app.listen(port, () => {
-            console.log(`Ag-Cel MCP Server running on SSE at http://localhost:${port}/sse`);
+            console.log(`AgCel MCP Server running on SSE at http://localhost:${port}/sse`);
         });
 
     } else {
         const transport = new StdioServerTransport();
         await server.connect(transport);
-        console.error("Ag-Cel MCP Server running on stdio");
+        console.error("AgCel MCP Server running on stdio");
     }
 }
 

@@ -5,7 +5,7 @@ import { getAgCelDir, isInitialized } from '../utils/index.js';
 
 export function listCommand(type: 'skills' | 'workflows') {
     if (!isInitialized()) {
-        console.error(chalk.red('Ag-Cel is not initialized. Run "agc init" first.'));
+        console.error(chalk.red('AgCel is not initialized. Run "agc init" first.'));
         return;
     }
 
@@ -17,7 +17,7 @@ export function listCommand(type: 'skills' | 'workflows') {
     // NOTE: In a real implementation, we might want to list from the temp_skills directory too if configured?
     // But per requirements, `agc init` creates .ag-cel.
 
-    // Let's list from .ag-cel/<type>
+    // Let's list from .AgCel/<type>
     let targetDir = path.join(agCelDir, type);
 
     // FIX: Workflows are stored in .agent/workflows, not .ag-cel/workflows
