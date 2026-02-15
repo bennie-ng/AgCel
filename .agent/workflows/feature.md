@@ -1,3 +1,7 @@
+---
+description: Implement a new feature.
+---
+
 # /feature - Feature Development Workflow
 
 ## Purpose

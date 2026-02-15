@@ -1,3 +1,7 @@
+---
+description: Get help on available commands and workflows.
+---
+
 # /help - Help Command
 
 ## Purpose

@@ -1,3 +1,7 @@
+---
+description: Interactive design and brainstorming session.
+---
+
 # /brainstorm - Interactive Design Session
 
 ## Purpose

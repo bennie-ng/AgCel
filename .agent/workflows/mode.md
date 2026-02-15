@@ -1,3 +1,7 @@
+---
+description: Switch between different AI modes.
+---
+
 # /mode
 
 ## Purpose

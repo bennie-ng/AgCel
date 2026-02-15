@@ -20,7 +20,7 @@ const mode = modeIndex !== -1 ? args[modeIndex + 1] : 'stdio'; // Default to std
 
 const server = new Server(
     {
-        name: "agcel",
+        name: "AgCel",
         version: "1.0.0",
     },
     {
@@ -37,7 +37,7 @@ function getSkillsDir(): string | null {
     const agCelDir = getAgCelDir();
     let skillsDir = path.join(agCelDir, 'skills');
 
-    // Fallback for global install where skills are in project root (e.g. ~/.agcel/skills)
+    // Fallback for global install where skills are in project root (e.g. ~/.agc/skills)
     if (!fs.existsSync(skillsDir)) {
         skillsDir = path.join(process.cwd(), 'skills');
     }

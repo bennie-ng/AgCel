@@ -1,3 +1,7 @@
+---
+description: Generate and update documentation.
+---
+
 # /doc - Documentation Command
 
 ## Purpose

@@ -1,3 +1,7 @@
+---
+description: Load context or data into the session.
+---
+
 # /load
 
 ## Purpose

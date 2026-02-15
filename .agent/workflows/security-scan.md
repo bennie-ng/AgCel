@@ -1,3 +1,7 @@
+---
+description: Perform security scans on the codebase.
+---
+
 # /security-scan - Security Scanning Command
 
 ## Purpose

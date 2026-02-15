@@ -1,3 +1,7 @@
+---
+description: Check the status of current tasks.
+---
+
 # /status - Project Status Command
 
 ## Purpose

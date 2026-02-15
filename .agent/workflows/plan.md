@@ -1,3 +1,7 @@
+---
+description: Create a detailed implementation plan.
+---
+
 # /plan - Task Planning Command
 
 ## Purpose

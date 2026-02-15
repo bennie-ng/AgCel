@@ -1,3 +1,7 @@
+---
+description: Index of available workflows.
+---
+
 # /index
 
 ## Purpose

@@ -1,3 +1,7 @@
+---
+description: Execute a planned implementation.
+---
+
 # /execute-plan - Subagent-Driven Plan Execution
 
 ## Purpose
