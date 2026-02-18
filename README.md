@@ -69,4 +69,4 @@ The `agc` command-line tool is your primary interface. Application data is store
 
 When working with the Antigravity IDE:
 1.  Run `agc init` to set up the environment.
-2.  Use workflows in the Agent Window (e.g., `/agc idea` for ideation).
+2.  Use workflows in the Agent Window (e.g., `/feature` to start developing a new feature).
