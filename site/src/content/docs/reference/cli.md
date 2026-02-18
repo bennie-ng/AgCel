@@ -53,6 +53,14 @@ Lists all available workflows.
 agc workflows list
 ```
 
+## Maintenance
+
+### `agc uninstall`
+Completely removes AgCel from your system, including global data and configuration.
+```bash
+agc uninstall
+```
+
 ## General
 
 ### `agc --help`

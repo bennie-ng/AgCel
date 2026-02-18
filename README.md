@@ -16,6 +16,16 @@ To install the AgCel CLI globally and set up the local MCP server:
 npx agcel install
 ```
 
+## Uninstallation
+
+To completely remove AgCel from your system:
+
+```bash
+agc uninstall
+```
+
+This will remove AgCel from your MCP config, delete the global data directory (`~/.agcel`), and prompt to uninstall the npm package.
+
 ## CLI Usage
 
 The `agc` command-line tool is your primary interface. Application data is stored in the `.agc` directory in your project root, and `~/.agcel` for global configuration.
@@ -29,6 +39,7 @@ The `agc` command-line tool is your primary interface. Application data is store
 | `agc init` | Initialize AgCel in the current project (copies workflows to `.agent/workflows`). |
 | `agc skills list` | List all available skills. |
 | `agc workflows list` | List all available workflows. |
+| `agc uninstall` | Completely remove AgCel from your system. |
 | `agc --help` | Show the help menu. |
 | `agc --version` | Show the CLI version. |
 

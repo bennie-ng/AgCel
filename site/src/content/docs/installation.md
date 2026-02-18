@@ -41,3 +41,16 @@ Check the status:
 ```bash
 agc status
 ```
+
+## Uninstallation
+
+If you need to completely remove AgCel from your system, you can use the built-in uninstall command:
+
+```bash
+agc uninstall
+```
+
+This command will:
+1. Remove AgCel from your `mcp_config.json`.
+2. Delete the global data directory at `~/.agcel`.
+3. Provide an option to run `npm uninstall -g agcel` to remove the CLI.
